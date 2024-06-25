@@ -4,7 +4,7 @@
 <br><br>
 
 <h1><strong> ERC20 ALTERNATIVE (LIVE ON POLYGON AMOY) </strong></h1>
-
+Test the Dapp : https://vercel.live/link/next-web3-boilerplate-git-2project-ac976b-thomasfevres-projects.vercel.app 
 <br></br>
 ### Using Next Web3 Boilerplate
 <br></br>
