@@ -4,7 +4,7 @@ import { type FC } from "react";
 import { Box, Divider, Flex, HStack, Heading, Spacer, useColorMode } from "@chakra-ui/react";
 import { useAccount } from "wagmi";
 
-import { useGetBalance } from "@/hooks";
+import { useGetBalance, useContractStatus } from "@/hooks";
 import styles from "@/styles/mainPane.module.css";
 import { SMART_CONTRACT_ADDRESS } from "@/utils/constants";
 
@@ -16,6 +16,7 @@ const MainPane: FC = () => {
   const { isConnected } = useAccount();
   const { colorMode } = useColorMode();
   const { refetch: refetchBalance } = useGetBalance();
+  const { refetchContract: refetchContract } = useContractStatus();
 
   return (
     <Box
@@ -25,7 +26,7 @@ const MainPane: FC = () => {
       <HStack className="centerHStack" margin={10}>
         <Spacer />
         <Heading as="h2" fontSize={"2rem"} className="text-shadow">
-          Air Data
+          Blockchain Data
         </Heading>
         <Spacer />
         <Status />
@@ -52,8 +53,18 @@ const MainPane: FC = () => {
               flexWrap={"wrap"}
               gap={5}
             >
-              <Buy refreshData={() => refetchBalance()} />
-              <Sell refreshData={() => refetchBalance()} />
+              <Buy
+                refreshData={() => {
+                  refetchBalance();
+                  refetchContract();
+                }}
+              />
+              <Sell
+                refreshData={() => {
+                  refetchBalance();
+                  refetchContract();
+                }}
+              />
             </Flex>
           </>
         )}

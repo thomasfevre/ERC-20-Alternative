@@ -1,7 +1,17 @@
 <div align="center">
 
-<img src="./public/img/logo_transparent.png" width="70px"/>
+<img src="./public/img/ERC-20.png" width="70px"/>
 <br><br>
+
+<h1><strong> ERC20 ALTERNATIVE (LIVE ON POLYGON AMOY) </strong></h1>
+
+<br></br>
+### Using Next Web3 Boilerplate
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
 
 <h1><strong> Next Web3 Boilerplate </strong></h1>
 
